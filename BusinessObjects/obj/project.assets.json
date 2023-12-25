@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\Music_Web.csproj",
-      "projectName": "Music_Web",
-      "projectPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\Music_Web.csproj",
+      "projectUniqueName": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\BusinessObjects\\BusinessObjects.csproj",
+      "projectName": "BusinessObjects",
+      "projectPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\BusinessObjects\\BusinessObjects.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\obj\\",
+      "outputPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\BusinessObjects\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,9 +68,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
