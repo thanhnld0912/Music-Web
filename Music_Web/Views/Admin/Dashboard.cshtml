@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Dashboard";
+    var isAuthenticated = Context.Session.GetString("UserId") != null;
+    // @model List<MusicWeb.Models.UserViewModel>
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Music Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    @await Html.PartialAsync("~/Views/Admin/Partials/_Tabs.cshtml", ViewData["ActiveTab"]?.ToString())
+
+    <div class="content-wrapper">
+        <div class="navbar">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="What do you want to hear?">
+                </div>
+                <div class="auth-buttons">
+                    @if (isAuthenticated)
+                    {
+                        <a href="@Url.Action("ProfileAdmin", "Account")" class="avatar-container">
+                            <img src="/img/avatar.jpg" alt="Avatar" class="user-avatar">
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @if ((ViewData["ActiveTab"]?.ToString() ?? "") == "dashboard")
+        {
+            @await Html.PartialAsync("~/Views/Admin/Partials/_DashboardTab.cshtml")
+        }
+        else if (ViewData["ActiveTab"]?.ToString() == "user")
+        {
+            @await Html.PartialAsync("~/Views/Admin/Partials/_UserTab.cshtml")
+        }
+        else if (ViewData["ActiveTab"]?.ToString() == "post")
+        {
+            @await Html.PartialAsync("~/Views/Admin/Partials/_PostTab.cshtml")
+        }
+    </div>
+
+    <script>
+        function toggleSidebar(event) {
+            event.stopPropagation();
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    @* <script src="~/js/chart.js"></script> *@
+</body>
+</html>
