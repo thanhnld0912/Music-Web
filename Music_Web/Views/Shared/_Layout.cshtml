@@ -1,49 +1,176 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "My Music Website";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Music_Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Music_Web.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style-carousel.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Music_Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo và tên Melofy -->
+            <div class="navbar-logo">
+                <img src="/img/lgo.png" alt="Logo" class="logo-img" />
+                <span class="melofy-text">Melofy</span>
+            </div>
+
+
+
+            <!-- Button Login on the right -->
+            <div class="navbar-login">
+                <button onclick="location.href='@Url.Action("Login", "Account")'" class="login-button">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-width">
+        <div class="slideshow">
+            <!-- Slideshow Items -->
+            <div class="slideshow-items">
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="/img/Image1.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>S</b></span>
+                        <span class="vertical-part"><b>m</b></span>
+                        <span class="vertical-part"><b>a</b></span>
+                        <span class="vertical-part"><b>r</b></span>
+                        <span class="vertical-part"><b>t</b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part"><b>Where</b></span>
+                        <span class="vertical-part"><b>creativity</b></span>
+                        <span class="vertical-part"><b>meets</b></span>
+                        <span class="vertical-part"><b>intelligence</b></span>
+                        <span class="vertical-part"><b>—</b></span>
+                        <span class="vertical-part"><b>redefining</b></span>
+                        <span class="vertical-part"><b>music</b></span>
+                        <span class="vertical-part"><b>with</b></span>
+                        <span class="vertical-part"><b>clarity,</b></span>
+                        <span class="vertical-part"><b>innovation,</b></span>
+                        <span class="vertical-part"><b>and</b></span>
+                        <span class="vertical-part"><b>smart</b></span>
+                        <span class="vertical-part"><b>design.</b></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="/img/Image2.jpg" />
+                    </div>
+
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>M</b></span>
+                        <span class="vertical-part"><b>e</b></span>
+                        <span class="vertical-part"><b>l</b></span>
+                        <span class="vertical-part"><b>o</b></span>
+                        <span class="vertical-part"><b>f</b></span>
+                        <span class="vertical-part"><b>y</b></span>
+                    </div>
+
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part"><b>Melofy</b></span>
+                        <span class="vertical-part"><b>is</b></span>
+                        <span class="vertical-part"><b>a</b></span>
+                        <span class="vertical-part"><b>music</b></span>
+                        <span class="vertical-part"><b>platform</b></span>
+                        <span class="vertical-part"><b>where</b></span>
+                        <span class="vertical-part"><b>you</b></span>
+                        <span class="vertical-part"><b>can</b></span>
+                        <span class="vertical-part"><b>listen</b></span>
+                        <span class="vertical-part"><b>to</b></span>
+                        <span class="vertical-part"><b>music</b></span>
+                        <span class="vertical-part"><b>and</b></span>
+                        <span class="vertical-part"><b>upload</b></span>
+                        <span class="vertical-part"><b>your</b></span>
+                        <span class="vertical-part"><b>own</b></span>
+                        <span class="vertical-part"><b>songs.</b></span>
+                        <span class="vertical-part"><b>Join</b></span>
+                        <span class="vertical-part"><b>our</b></span>
+                        <span class="vertical-part"><b>community</b></span>
+                        <span class="vertical-part"><b>and</b></span>
+                        <span class="vertical-part"><b>share</b></span>
+                        <span class="vertical-part"><b>your</b></span>
+                        <span class="vertical-part"><b>passion</b></span>
+                        <span class="vertical-part"><b>for</b></span>
+                        <span class="vertical-part"><b>music</b></span>
+                        <span class="vertical-part"><b>with</b></span>
+                        <span class="vertical-part"><b>Melofy!</b></span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="~/img/Image3.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>H</b></span>
+                        <span class="vertical-part"><b>e</b></span>
+                        <span class="vertical-part"><b>a</b></span>
+                        <span class="vertical-part"><b>r</b></span>
+                        <span class="vertical-part"><b>t</b></span>
+                        <span class="vertical-part"><b>f</b></span>
+                        <span class="vertical-part"><b>e</b></span>
+                        <span class="vertical-part"><b>l</b></span>
+                        <span class="vertical-part"><b>t</b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part"><b>A</b></span>
+                        <span class="vertical-part"><b>heartfelt,</b></span>
+                        <span class="vertical-part"><b>inspiring,</b></span>
+                        <span class="vertical-part"><b>and</b></span>
+                        <span class="vertical-part"><b>soulful</b></span>
+                        <span class="vertical-part"><b>experience</b></span>
+                        <span class="vertical-part"><b>that</b></span>
+                        <span class="vertical-part"><b>connects</b></span>
+                        <span class="vertical-part"><b>you</b></span>
+                        <span class="vertical-part"><b>with</b></span>
+                        <span class="vertical-part"><b>the</b></span>
+                        <span class="vertical-part"><b>essence</b></span>
+                        <span class="vertical-part"><b>of</b></span>
+                        <span class="vertical-part"><b>music</b></span>
+                        <span class="vertical-part"><b>and</b></span>
+                        <span class="vertical-part"><b>the</b></span>
+                        <span class="vertical-part"><b>stories</b></span>
+                        <span class="vertical-part"><b>behind</b></span>
+                        <span class="vertical-part"><b>every</b></span>
+                        <span class="vertical-part"><b>note.</b></span>
+                    </div>
+
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Music_Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="item-button-container">
+                <a href="@Url.Action("Loader", "Home")">
+                    <!-- Chuyển hướng đến loader.cshtml -->
+                    <button class="item-button">Explore Now</button>
+                </a>
+            </div>
+            <div class="controls">
+                <ul>
+                    <li class="control" data-index="0"></li>
+                    <li class="control" data-index="1"></li>
+                    <li class="control" data-index="2"></li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My Music Website</p>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/layout.js"></script>
 </body>
 </html>
