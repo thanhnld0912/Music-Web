@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
+      "projectUniqueName": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\Music_Web.csproj",
       "projectName": "Music_Web",
-      "projectPath": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
+      "projectPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\Music_Web.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN222\\Music-Web\\Music_Web\\obj\\",
+      "outputPath": "E:\\SE_Ky7\\PRNFInal\\Music-Web\\Music_Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
