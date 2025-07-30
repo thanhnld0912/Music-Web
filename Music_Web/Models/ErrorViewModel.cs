@@ -1,4 +1,4 @@
-namespace MusicWebMVC.Models
+namespace Music_Web.Models
 {
     public class ErrorViewModel
     {
