@@ -1,11 +1,11 @@
-﻿@model MusicWebMVC.ViewModels.NewFeedViewModel
+﻿@model Music_Web.ViewModels.NewFeedViewModel
 @{
     Layout = null;
     ViewData["Title"] = "NewFeed";
     var isAuthenticated = Context.Session.GetString("UserId") != null;
     var userId = Context.Session.GetString("UserId");
     var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/avatar.jpg";
-    // @model List<MusicWebMVC.Models.Post>
+    // @model List<Music_Web.Models.Post>
     var isDisabled = Model.User.IsDisabled;
 }
 
