@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\Music_Web\\Music_Web.csproj": {}
+    "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\MusicRepositories\\MusicRepositories.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\Music_Web\\Music_Web.csproj": {
+    "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\MusicRepositories\\MusicRepositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\Music_Web\\Music_Web.csproj",
-        "projectName": "Music_Web",
-        "projectPath": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\Music_Web\\Music_Web.csproj",
+        "projectUniqueName": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\MusicRepositories\\MusicRepositories.csproj",
+        "projectName": "MusicRepositories",
+        "projectPath": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\MusicRepositories\\MusicRepositories.csproj",
         "packagesPath": "C:\\Users\\daukh\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\Music_Web\\obj\\",
+        "outputPath": "D:\\FPT\\Ki7FPT\\PRN222\\Project\\Music-Web\\MusicRepositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
