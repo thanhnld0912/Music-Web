@@ -1,0 +1,884 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "ProfileUser";
+    var isFollowing = ViewBag.IsFollowing ?? false;
+    var isAuthenticated = false;
+    var userId = "";
+    var isOwnProfile = false;
+    var followerCount = ViewBag.FollowerCount ?? 0;
+    var followingCount = ViewBag.FollowingCount ?? 0;
+    var userPosts = ViewBag.UserPosts as List<MusicWebMVC.Models.Post> ?? new List<MusicWebMVC.Models.Post>();
+    var userSongs = ViewBag.UserSongs as List<MusicWebMVC.Models.Song> ?? new List<MusicWebMVC.Models.Song>();
+    var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/avatar.jpg";
+
+    try
+    {
+        userId = Context?.Session?.GetString("UserId");
+        isAuthenticated = !string.IsNullOrEmpty(userId);
+        // Check if the profile being viewed belongs to the logged-in user
+        isOwnProfile = isAuthenticated && userId == Model?.Id.ToString();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Lỗi lấy session: {ex.Message}");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+@@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px 5px;
+        transition: all 0.3s ease;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 50px;
+        z-index: 999;
+    }
+
+    .main-content {
+        margin-left: 10px !important;
+        width: calc(100% - 20px) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .main-content-top {
+        width: 98%;
+    }
+
+    .post-card,
+    .newfeed-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-bar,
+    .tab-nav {
+        margin-left: 70px;
+        width: calc(100% - 80px);
+    }
+
+    .logo,
+    .logoimg,
+    .create-playlist,
+    .sidebar-section,
+    .trending,
+    .register {
+        display: none;
+    }
+
+    .sidebar-toggle {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .navbar {
+        margin-left: 10px;
+    }
+
+    .post-topuser-left {
+        width: 100%;
+    }
+
+    .post {
+        padding: 30px 50px;
+        width: 100%;
+    }
+
+    .auth-button {
+        position: absolute;
+    }
+
+    .search-box {
+        width: 72%;
+    }
+
+    .login {
+        top: 2px;
+        right: 25px;
+    }
+
+    .top-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 20px !important;
+        margin-top: 15px;
+    }
+
+    .tab {
+        cursor: pointer;
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s;
+        margin-top: unset;
+    }
+
+    .content {
+        display: none;
+    }
+
+        .content:first-child {
+            display: block;
+        }
+
+    .avatar {
+        max-width: none;
+
+    }
+
+    .username {
+        margin: 0 120px !important;
+    }
+
+    .handle {
+        margin: 10px 200px;
+    }
+    /* Song Grid Layout & Styling */
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.song {
+    position: relative;
+    background-color: #22222A;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .song:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+.song-artist-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(116, 73, 225, 0.8);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.song-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.song-cover {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+}
+
+    .song-cover img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.song:hover .song-cover img {
+    transform: scale(1.05);
+}
+
+.default-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #333, #222);
+    font-size: 24px;
+    font-weight: bold;
+    color: #7449E1;
+}
+
+/* Song Info Section */
+.song-item {
+    padding: 15px;
+    background-color: rgba(54, 54, 54, 0.9);
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Title and Time */
+.time-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .time-title span {
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 85%;
+    }
+
+.time-display {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Audio Controls */
+.song-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Enhanced play controls */
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.play-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #7449E1, #6a42d1);
+    box-shadow: 0 4px 10px rgba(116, 73, 225, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+    .play-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(116, 73, 225, 0.6);
+    }
+
+    .play-button i {
+        color: white;
+        font-size: 18px;
+        padding-left: 3px; /* Slight offset for the play icon */
+    }
+
+.play-progress {
+    flex: 1;
+}
+
+.progress-container {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #7449E1, #e74c3c);
+    border-radius: 6px;
+    transition: width 0.05s linear;
+}
+
+/* Volume control styling */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+    .volume-control i {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+    .volume-control:hover i {
+        color: white;
+    }
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    outline: none;
+}
+
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #7449E1;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #7449E1;
+        cursor: pointer;
+    }
+
+/* YouTube link styling */
+.youtube-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+    .youtube-link:hover {
+        background-color: #cc0000;
+    }
+
+    .youtube-link i {
+        font-size: 18px;
+    }
+
+    .youtube-link h3 {
+        font-size: 14px;
+        margin: 0;
+    }
+
+/* View details button */
+.view-detail-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+    .view-detail-btn:hover {
+        background-color: #444;
+    }
+
+    .view-detail-btn i {
+        font-size: 14px;
+    }
+
+/* Playing state */
+.song.playing .play-button {
+    background: linear-gradient(145deg, #e74c3c, #d44637);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+}
+
+    .song.playing .play-button:hover {
+        box-shadow: 0 6px 15px rgba(231, 76, 60, 0.6);
+    }
+
+.song.playing .progress-bar {
+    background: linear-gradient(90deg, #e74c3c, #f39c12);
+}
+
+/* Responsive adjustments */
+@@media screen and (max-width: 768px) {
+    .song-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .play-button {
+        width: 40px;
+        height: 40px;
+    }
+
+        .play-button i {
+            font-size: 16px;
+        }
+
+    .time-title span {
+        font-size: 16px;
+    }
+
+    .time-display {
+        font-size: 12px;
+    }
+
+    .volume-slider {
+        width: 60px;
+    }
+}
+}</style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Music Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/profileuserr.css">
+</head>
+<body onclick="closeAll(event)">
+    <!-- Sidebar -->
+    @await Component.InvokeAsync("Sidebar")
+    <input id="avatar-url" value="@avatarUrl" hidden></input>
+    <input id="current-user-id" value="@userId" hidden></input>
+    <!-- Chat Boxes -->
+    <div class="chat-box" id="playlistBox">
+        <h3>Create Playlist</h3>
+        @if (isAuthenticated)
+        {
+            <input type="text" placeholder="Enter playlist name" />
+            <button class="message-login-button">Create</button>
+        }
+        else
+        {
+            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+        }
+    </div>
+
+    <div class="chat-box" id="storyBox">
+        <h3>Share Your Story</h3>
+        @if (isAuthenticated)
+        {
+            <textarea placeholder="Write your story..."></textarea>
+            <button class="message-login-button">Post</button>
+        }
+        else
+        {
+            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+        }
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+        <!-- Navbar -->
+        @await Component.InvokeAsync("Navbar")
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="main-content-top">
+                <div class="top-profile">
+                    <div class="avatar">
+                        <img src="@ViewData[$"avatar-url"]" alt="Alternate Text" />
+                    </div>
+                    <div class="name-id">
+                        <div class="username">@(Model?.Username ?? "User")</div>
+                        <div class="handle" data-user-id="@(Model?.Id ?? 0)">@("@" + (Model?.Username ?? "user"))</div>
+                    </div>
+
+                    <div class="follow-zone">
+                        <div class="follow-stats">
+                            <div class="stat-item">
+                                <span class="stat-count" id="stat-follower" data-follower="@followerCount">@followerCount</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-count">@followingCount</span>
+                                <span class="stat-label">Following</span>
+                            </div>
+                        </div>
+
+                        @if (!isOwnProfile && isAuthenticated)
+                        {
+                            <button class="follow-btn @(isFollowing ? "followed" : "")" onclick="toggleFollow()">
+                                @(isFollowing ? "Followed ✓" : "Follow")
+                            </button>
+                        }
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab active" onclick="showContent('status')">Status</div>
+                    <div class="tab" onclick="showContent('song')">Song</div>
+                </div>
+            </div>
+
+
+            <!-- Posts section -->
+            <div class="content" id="status">
+                @if (!userPosts.Any())
+                {
+                    <p>No posts available.</p>
+                }
+                else
+                {
+                    @foreach (var post in userPosts)
+                    {
+                        <div class="post" data-post-id="@post.Id">
+                            <!-- Post Header -->
+                            <div class="post-header">
+                                <div class="post-avatar"><img src="@post.User.AvatarUrl"/></div>
+                                <div class="post-info">
+                                    <div class="post-author">@post.User.Username</div>
+                                    <div class="post-time">@post.CreatedAt.ToString("dd/MM/yyyy HH:mm")</div>
+                                </div>
+                                @if (int.Parse(Context.Session.GetString("UserId") ?? "0") == post.UserId)
+                                {
+                                    <div class="post-options">
+                                        <button class="options-btn" onclick="togglePostMenu(event, @post.Id)">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="post-menu" id="postMenu-@post.Id">
+                                            <div class="menu-item" onclick="window.location.href='@Url.Action("PostDetail", "Home", new { id = post.Id })'">
+                                                <i class="fas fa-eye"></i> View Detail
+                                            </div>
+                                            <div class="menu-item" onclick="editPost(@post.Id)">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </div>
+                                            <div class="menu-item" onclick="confirmDeletePost(@post.Id)">
+                                                <i class="fas fa-trash"></i> Delete
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="post-options">
+                                        <button class="options-btn" onclick="togglePostMenu(event, @post.Id)">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="post-menu" id="postMenu-@post.Id">
+                                            <div class="menu-item" onclick="window.location.href='@Url.Action("PostDetail", "Home", new { id = post.Id })'">
+                                                <i class="fas fa-eye"></i> View Detail
+                                            </div>
+                                            <div class="menu-item" onclick="reportPost(@post.Id)">
+                                                <i class="fas fa-flag"></i> Report
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            <!-- Post Content -->
+                            <div class="post-content">
+                                <p>@post.Content</p>
+                                @if (!string.IsNullOrEmpty(post.ImageUrl))
+                                {
+                                    <img src="@post.ImageUrl" class="post-image" />
+                                }
+                                @if (!string.IsNullOrEmpty(post.LinkYoutube))
+                                {
+                                    <a href="@post.LinkYoutube" target="_blank" class="youtube-link">
+                                        <i class="fab fa-youtube"></i>
+                                        <h3>Youtube</h3>
+                                    </a>
+                                }
+                            </div>
+                            <!-- Songs -->
+                            @if (post.Song != null)
+                            {
+                                <div class="song-item">
+                                    <div class="song-info">
+                                        <div class="song-container">
+                                            <div class="custom-audio-player" data-song-url="@post.Song.FileUrl">
+                                                <div class="play-button">
+                                                    <i class="fas fa-play" id="play-icon-@post.Song.Id"></i>
+                                                </div>
+
+                                                <div class="play-progress">
+                                                    <div class="time-display">0:00</div>
+                                                    <div class="progress-container" id="progress-container-@post.Song.Id">
+                                                        <div class="progress-bar" id="progress-bar-@post.Song.Id"></div>
+                                                    </div>
+                                                </div>
+
+                                                <audio id="audio-@post.Song.Id" style="display: none;">
+                                                    <source src="@post.Song.FileUrl" type="audio/mpeg">
+                                                </audio>
+                                            </div>
+                                            <div class="volume-control">
+                                                <i class="fas fa-volume-up"></i>
+                                                <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" id="volume-slider-@post.Song.Id">
+                                            </div>
+                                        </div>
+
+                                        <span onclick="window.location.href='@Url.Action("SongPage", "Song", new { postId = post.Id })'">@post.Song.Title</span>
+                                    </div>
+                                </div>
+                            }
+
+                            <!-- Post Actions -->
+                            <div class="post-actions">
+                                <!-- Action buttons with integrated count -->
+                                <div class="action-buttons-container">
+                                    @{
+                                        bool userLiked = ViewData[$"UserLiked_{post.Id}"] != null && (bool)ViewData[$"UserLiked_{post.Id}"];
+                                        bool userDisliked = ViewData[$"UserDisliked_{post.Id}"] != null && (bool)ViewData[$"UserDisliked_{post.Id}"];
+                                    }
+                                    <button class="fb-action-btn like-btn @(userLiked ? "active" : "")" onclick="likePost(this, @post.Id)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>Like</span>
+                                        <span class="count-badge">@(post.Likes?.Count ?? 0)</span>
+                                    </button>
+                                    <button class="fb-action-btn dislike-btn @(userDisliked ? "active" : "")" onclick="dislikePost(this, @post.Id)">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <span>Dislike</span>
+                                        <span class="count-badge">@(post.Dislikes?.Count ?? 0)</span>
+                                    </button>
+                                    <button class="fb-action-btn comment-btn" onclick="toggleCommentSection(this, @post.Id)">
+                                        <i class="fas fa-comment"></i>
+                                        <span>Comment</span>
+                                        <span class="count-badge">@(post.Comments?.Count ?? 0)</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div id="edit-post-overlay" class="edit-overlay">
+                        <div class="edit-container">
+                            <div class="edit-header">
+                                <h3>Edit Post</h3>
+                                <button class="close-edit-btn" onclick="closeEditForm()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="edit-form">
+                                <input type="hidden" id="edit-post-id">
+                                <textarea id="edit-post-content" placeholder="What's on your mind?"></textarea>
+                                <div id="edit-image-preview-container" style="display: none;">
+                                    <img id="edit-image-preview" src="" alt="Post image">
+                                    <button type="button" class="remove-image-btn" onclick="removeEditImage()">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="edit-form-buttons">
+                                    <button onclick="addEditImage()">
+                                        <i class="fas fa-image"></i> Add Image
+                                    </button>
+                                    <input type="file" id="edit-image-upload" style="display: none;" accept="image/*" onchange="previewEditImage(event)">
+                                    <button class="save-edit-btn" onclick="savePostEdit()">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add the delete confirmation dialog -->
+                    <div id="delete-confirm-overlay" class="confirm-overlay">
+                        <div class="confirm-container">
+                            <div class="confirm-header">
+                                <h3>Delete Post</h3>
+                            </div>
+                            <div class="confirm-body">
+                                <p>Are you sure you want to delete this post? This action cannot be undone.</p>
+                            </div>
+                            <div class="confirm-footer">
+                                <button class="cancel-btn" onclick="closeDeleteConfirm()">Cancel</button>
+                                <button class="delete-btn" onclick="executeDeletePost()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+  
+            <div class="content" id="song" style="display: none;">
+                @if (!userSongs.Any())
+                {
+                    <p>No songs available.</p>
+                }
+                else
+                {
+                    <div class="song-grid">
+                        @foreach (var song in userSongs)
+                        {
+                            <div class="song" data-song-id="@song.Id">
+                                <div class="song-artist-badge">
+                                    <i class="fas fa-music"></i> @song.Post.User.Username
+                                </div>
+                                <div class="song-card">
+                                    <div class="song-cover">
+                                        @if (!string.IsNullOrEmpty(song.CoverImage))
+                                        {
+                                            <img src="@song.CoverImage" alt="@song.Title" />
+                                        }
+                                        else
+                                        {
+                                            <div class="default-cover">
+                                                <span>@song.Title</span>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="song-item">
+                                        <div class="song-info">
+                                            <div class="time-title">
+                                                <span title="@song.Title">@song.Title</span>
+                                                <div class="time-display" id="time-display-@song.Id">0:00</div>
+                                            </div>
+
+                                            <div class="song-info-container">
+                                                <div class="custom-audio-player" data-song-url="@song.FileUrl">
+                                                    <div class="play-button">
+                                                        <i class="fas fa-play" id="play-icon-@song.Id"></i>
+                                                    </div>
+
+                                                    <div class="play-progress">
+                                                        <div class="progress-container" id="progress-container-@song.Id">
+                                                            <div class="progress-bar" id="progress-bar-@song.Id"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <audio id="audio-@song.Id" style="display: none;">
+                                                        <source src="@song.FileUrl" type="audio/mpeg">
+                                                    </audio>
+                                                </div>
+
+                                                <div class="volume-control">
+                                                    <i class="fas fa-volume-up" id="volume-icon-@song.Id"></i>
+                                                    <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" id="volume-slider-@song.Id">
+                                                </div>
+
+                                                @if (!string.IsNullOrEmpty(song.Post?.LinkYoutube))
+                                                {
+                                                    <a href="@song.Post.LinkYoutube" target="_blank" class="youtube-link">
+                                                        <i class="fab fa-youtube"></i>
+                                                        <h3>YouTube</h3>
+                                                    </a>
+                                                }
+
+                                                <button class="view-detail-btn" onclick="window.location.href='@Url.Action("PostDetail", "Home", new { id = @song.Post.Id })'">
+                                                    <i class="fas fa-eye"></i> View Details
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="report-post-overlay" class="report-overlay">
+        <div class="report-container">
+            <div class="report-header">
+                <h3>Report Post</h3>
+                <button class="close-report-btn" onclick="closeReportPostForm()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="report-form">
+                <input type="hidden" id="report-post-id">
+                <div class="report-reason-section">
+                    <p>Why are you reporting this post?</p>
+                    <div class="report-options">
+                        <label>
+                            <input type="radio" name="report-reason" value="Inappropriate content"> Inappropriate content
+                        </label>
+                        <label>
+                            <input type="radio" name="report-reason" value="Spam"> Spam
+                        </label>
+                        <label>
+                            <input type="radio" name="report-reason" value="Harassment"> Harassment
+                        </label>
+                        <label>
+                            <input type="radio" name="report-reason" value="False information"> False information
+                        </label>
+                        <label>
+                            <input type="radio" name="report-reason" value="Other"> Other
+                        </label>
+                    </div>
+                    <textarea id="report-details" placeholder="Please provide more details about your report..." rows="4"></textarea>
+                </div>
+                <div class="report-form-buttons">
+                    <button class="cancel-report-btn" onclick="closeReportPostForm()">Cancel</button>
+                    <button class="submit-report-btn" onclick="submitPostReport()">Submit Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comment Overlay -->
+    <div id="comment-overlay" class="comment-overlay">
+        <div class="comment-container">
+            <div class="comment-header">
+                <h3>Comments</h3>
+                <button class="close-comment-btn" onclick="closeCommentSection()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="fb-comment-section">
+                <div class="fb-comment-input-container">
+                    <div class="comment-avatar">
+                        <img src="@avatarUrl" alt="avatar" class="comment-user-avatar">
+                    </div>
+                    <div class="fb-comment-input-wrapper">
+                        <input type="text" placeholder="Write a comment..." class="fb-comment-input">
+                        <div class="fb-comment-tools">
+                            <i class="fas fa-smile"></i>
+                            <i class="fas fa-camera"></i>
+                            <i class="fas fa-paper-plane" onclick="submitComment(event)"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-comments-list">
+                    <!-- Comments will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("GlobalPlayer")
+
+    <script src="~/js/profileuser.js"> </script>
+
+    <script src="~/js/globalplayer.js"></script>
+</body>
+</html>
