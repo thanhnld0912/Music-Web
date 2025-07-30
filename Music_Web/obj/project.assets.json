@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\Music-Web\\Music_Web\\Music_Web.csproj",
+      "projectUniqueName": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
       "projectName": "Music_Web",
-      "projectPath": "E:\\FPT\\Music-Web\\Music_Web\\Music_Web.csproj",
+      "projectPath": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\Music-Web\\Music_Web\\obj\\",
+      "outputPath": "D:\\PRN222\\Music-Web\\Music_Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

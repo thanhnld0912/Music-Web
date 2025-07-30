@@ -1,12 +1,48 @@
-# Ignore Visual Studio folders
-.vs/
+## Build results
+bin/
+obj/
 
-# Ignore build output
-/obj/
-/bin/
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Ignore appsettings.json
-appsettings.json
+## VS Code
+.vscode/
 
+## Rider
+.idea/
 
-*.csproj.user
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+*.db
+*.db-shm
+*.db-wal
+
+## Logs
+*.log
+logs/
+
+## Entity Framework
+Migrations/
+
+## Dependency directories
+node_modules/
+packages/
+bower_components/
+
+## Publish output
+publish/
+out/
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Other
+*.swp
+*.DS_Store
+Thumbs.db
