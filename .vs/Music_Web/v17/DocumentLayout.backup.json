@@ -1,0 +1,601 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PRN222\\Music-Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\songservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\songservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\isongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\isongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\recentplayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\recentplayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\irecentplayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\irecentplayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\postreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\postreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\ipostreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\ipostreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\playlistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\playlistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\likeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\likeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\followservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\followservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\dislikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\dislikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\commentreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\commentreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\applicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\applicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\iplaylistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\iplaylistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\ilikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\ilikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\idislikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\idislikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\icommentreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\icommentreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\interfaces\\iapplicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\interfaces\\iapplicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|d:\\prn222\\music-web\\services\\services\\playlistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E8BE9D-789F-43B8-8A60-1B28E2CA492F}|Services\\Services.csproj|solutionrelative:services\\services\\playlistsongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67B64573-9E7E-4D77-BC68-6DF92AD2FD0C}|Music_Web\\Music_Web.csproj|d:\\prn222\\music-web\\music_web\\music_web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{67B64573-9E7E-4D77-BC68-6DF92AD2FD0C}|Music_Web\\Music_Web.csproj|solutionrelative:music_web\\music_web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:33:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\UserService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:15:26.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:15:16.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SongService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\SongService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\SongService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\SongService.cs",
+              "RelativeToolTip": "Services\\Services\\SongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:15:00.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISongService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ISongService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ISongService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ISongService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ISongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:14:44.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecentPlayService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\RecentPlayService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\RecentPlayService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\RecentPlayService.cs",
+              "RelativeToolTip": "Services\\Services\\RecentPlayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:14:29.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRecentPlayService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IRecentPlayService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IRecentPlayService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IRecentPlayService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IRecentPlayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:14:13.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostReportService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\PostReportService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\PostReportService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\PostReportService.cs",
+              "RelativeToolTip": "Services\\Services\\PostReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:13:57.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPostReportService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPostReportService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IPostReportService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPostReportService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IPostReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:13:42.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PostService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\PostService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\PostService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\PostService.cs",
+              "RelativeToolTip": "Services\\Services\\PostService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:13:25.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlaylistSongService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\PlaylistSongService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\PlaylistSongService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\PlaylistSongService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\PlaylistSongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:13:13.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PlaylistSongService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\PlaylistSongService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\PlaylistSongService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\PlaylistSongService.cs",
+              "RelativeToolTip": "Services\\Services\\PlaylistSongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:12:49.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IPlaylistSongService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPlaylistSongService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IPlaylistSongService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPlaylistSongService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IPlaylistSongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:12:32.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlaylistService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\PlaylistService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\PlaylistService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\PlaylistService.cs",
+              "RelativeToolTip": "Services\\Services\\PlaylistService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:12:18.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IPlaylistService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPlaylistService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IPlaylistService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IPlaylistService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IPlaylistService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:12:00.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Services\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:11:44.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\INotificationService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:11:22.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\MessageService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\MessageService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\MessageService.cs",
+              "RelativeToolTip": "Services\\Services\\MessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:10:59.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IMessageService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IMessageService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IMessageService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IMessageService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IMessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:10:50.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LikeService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\LikeService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\LikeService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\LikeService.cs",
+              "RelativeToolTip": "Services\\Services\\LikeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:09:17.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ILikeService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ILikeService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ILikeService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ILikeService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ILikeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:09:01.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FollowService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\FollowService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\FollowService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\FollowService.cs",
+              "RelativeToolTip": "Services\\Services\\FollowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:08:33.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IFollowService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IFollowService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IFollowService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IFollowService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IFollowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:08:23.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DislikeService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\DislikeService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\DislikeService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\DislikeService.cs",
+              "RelativeToolTip": "Services\\Services\\DislikeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:07:59.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IDislikeService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IDislikeService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IDislikeService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IDislikeService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IDislikeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:07:48.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CommentReportService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\CommentReportService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\CommentReportService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\CommentReportService.cs",
+              "RelativeToolTip": "Services\\Services\\CommentReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:07:32.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ICommentReportService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ICommentReportService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICommentReportService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ICommentReportService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICommentReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:07:16.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CommentService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\CommentService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\CommentService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\CommentService.cs",
+              "RelativeToolTip": "Services\\Services\\CommentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:06:55.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ICommentService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ICommentService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICommentService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\ICommentService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICommentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:06:38.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationUserService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Services\\ApplicationUserService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\ApplicationUserService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Services\\ApplicationUserService.cs",
+              "RelativeToolTip": "Services\\Services\\ApplicationUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:06:16.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IApplicationUserService.cs",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IApplicationUserService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IApplicationUserService.cs",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Services\\Interfaces\\IApplicationUserService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IApplicationUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:03:06.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Music_Web.csproj",
+              "DocumentMoniker": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
+              "RelativeDocumentMoniker": "Music_Web\\Music_Web.csproj",
+              "ToolTip": "D:\\PRN222\\Music-Web\\Music_Web\\Music_Web.csproj",
+              "RelativeToolTip": "Music_Web\\Music_Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-30T13:10:57.895Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
