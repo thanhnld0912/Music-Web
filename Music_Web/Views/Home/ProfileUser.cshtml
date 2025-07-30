@@ -7,8 +7,8 @@
     var isOwnProfile = false;
     var followerCount = ViewBag.FollowerCount ?? 0;
     var followingCount = ViewBag.FollowingCount ?? 0;
-    var userPosts = ViewBag.UserPosts as List<MusicWebMVC.Models.Post> ?? new List<MusicWebMVC.Models.Post>();
-    var userSongs = ViewBag.UserSongs as List<MusicWebMVC.Models.Song> ?? new List<MusicWebMVC.Models.Song>();
+    var userPosts = ViewBag.UserPosts as List<Music_Web.Models.Post> ?? new List<Music_Web.Models.Post>();
+    var userSongs = ViewBag.UserSongs as List<Music_Web.Models.Song> ?? new List<MusicWebMVC.Models.Song>();
     var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/avatar.jpg";
 
     try

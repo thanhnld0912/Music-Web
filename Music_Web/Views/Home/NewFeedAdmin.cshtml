@@ -4,7 +4,7 @@
     var isAuthenticated = Context.Session.GetString("UserId") != null;
     var userId = Context.Session.GetString("UserId");
     var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/admin.jpg";
-    @model List<MusicWebMVC.Models.Post>
+    @model List<Music_Web.Models.Post>
 
 }
 
